@@ -1,11 +1,15 @@
-pipeline { // top level field
+pipeline {
     agent any
     stages {
-        stage ('GITSCM') { // Name: can be userfrriendly name, but needs to be specific fof the task performing
+        stage ('GITSCM')
            steps {
             echo "Welcome to First Pipeline!!!!"
            } 
         }
-
+        stage('fortify') {
+            steps {
+                echo "Executing Scans"
+            }
+        }   
     } 
 }

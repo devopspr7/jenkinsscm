@@ -1,12 +1,11 @@
-//syntax
-//sample Pipeline
-pipeline{
-  agent any
-  stages {
-    stage ("GitSCM") {
-      step {
-        echo "First Pipeline"
-      }
-    }  
-   }    
-  }
+pipeline { // top level field
+    agent any
+    stages {
+        stage ('GITSCM') { // Name: can be userfrriendly name, but needs to be specific fof the task performing
+           steps {
+            echo "Welcome to First Pipeline!!!!"
+           } 
+        }
+
+    } 
+}

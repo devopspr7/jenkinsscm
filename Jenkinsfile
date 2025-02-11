@@ -11,6 +11,11 @@ pipeline {
                 echo "Executing Test stage"
             }
         }
+        stage ('currency') {
+            steps {
+                echo "Executing Multi branch pipeline from github"
+            }            
+        }
         stage ('deploytodev') {
             steps {
                 echo "Executing Dev deployment stage"

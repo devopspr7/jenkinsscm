@@ -6,14 +6,9 @@ pipeline {
                 echo "Executing Multi branch pipeline from github"
             }
         }
-        stage ('ScansSonar') {
+        stage ('test') {
             steps {
-                echo "Executing Multi branch pipeline from github"
-            }
-        }
-        stage ('dockerbuild') {
-            steps {
-                echo "Executing Multi branch pipeline from github"
+                echo "Executing Test stage"
             }
         }
         stage ('deploytodev') {

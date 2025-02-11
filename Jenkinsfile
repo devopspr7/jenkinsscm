@@ -1,19 +1,24 @@
 pipeline {
-    agent none 
+    agent any 
     stages {
-        stage ('QRbuild'){
+        stage ('Build') {
             steps {
-                echo "build"
+                echo "Executing Multi branch pipeline from github"
             }
         }
-        stage ('sonar'){
+        stage ('test') {
             steps {
-                echo "sonar scans"
+                echo "Executing Test stage"
             }
         }
-        stage ('deploy'){
+        stage ('deploytodev') {
             steps {
-                echo "deployed to kubernetes"
+                echo "Executing Dev deployment stage"
+            }
+        }
+        stage ('deploytoprod') {
+            steps {
+                echo "Executing Prod deployment stage"
             }
         }
     }

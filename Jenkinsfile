@@ -11,6 +11,11 @@ pipeline {
                 echo "Executing Test stage"
             }
         }
+        stage ('dockerbuild') {
+            steps {
+                echo "Executing Docker build"
+            }
+        }    
         stage ('deploytodev') {
             steps {
                 echo "Executing Dev deployment stage"

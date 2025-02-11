@@ -1,7 +1,7 @@
 pipeline {
     agent none 
     stages {
-        stage ('build'){
+        stage ('QRbuild'){
             steps {
                 echo "build"
             }
